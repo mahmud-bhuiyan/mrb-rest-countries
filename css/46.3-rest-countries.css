@@ -1,0 +1,22 @@
+h1 {
+  text-align: center;
+  font-style: italic;
+  text-decoration: underline;
+}
+.countries {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.country {
+  border: 3px solid greenyellow;
+  background-color: aquamarine;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+}
+
+.country img {
+  width: 200px;
+}
