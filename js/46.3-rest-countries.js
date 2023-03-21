@@ -18,6 +18,7 @@ const getCountryHTML = (country) => {
         <div class="country">
             <h2>${country?.name?.common}</h2>
             <img src="${country?.flags?.png}">
+            <h5>Capital: ${country?.capital}</h5>
         </div>
     `;
 };
