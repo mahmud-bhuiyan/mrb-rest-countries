@@ -13,12 +13,30 @@ const displayCountries = (countries) => {
   container.innerHTML = countriesHTML.join(" ");
 };
 
-const getCountryHTML = (country) => {
+/*--------------- destructuring ---------------*/
+/*------------------ Option 1 ------------------*/
+// const getCountryHTML = (country) => {
+//   const { name, flags, capital, region, continents } = country;
+//   return `
+//         <div class="country">
+//             <h2>${name?.common}</h2>
+//             <img src="${flags?.png}">
+//             <h5>Capital: ${capital}</h5>
+//             <h6>Region: ${region}</h6>
+//             <h6>Continents: ${continents}</h6>
+//         </div>
+//     `;
+// };
+
+/*--------- Option 2 [parameter destructuring] ---------*/
+const getCountryHTML = ({ name, flags, capital, region, continents }) => {
   return `
         <div class="country">
-            <h2>${country?.name?.common}</h2>
-            <img src="${country?.flags?.png}">
-            <h5>Capital: ${country?.capital}</h5>
+            <h2>${name?.common}</h2>
+            <img src="${flags?.png}">
+            <h5>Capital: ${capital}</h5>
+            <h6>Region: ${region}</h6>
+            <h6>Continents: ${continents}</h6>
         </div>
     `;
 };

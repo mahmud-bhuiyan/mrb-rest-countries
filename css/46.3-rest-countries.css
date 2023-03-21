@@ -1,8 +1,10 @@
-h1 {
+#country-heading {
   text-align: center;
   font-style: italic;
   text-decoration: underline;
+  cursor: pointer;
 }
+
 .countries {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
